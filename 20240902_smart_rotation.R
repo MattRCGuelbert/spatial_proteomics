@@ -12,10 +12,6 @@ library(tidyverse)
 
 
 #1. Define functions & themes ----
-read.geojson <- function(z){
-  z <- geojson_read((paste0(as.character(z),".geojson")),what="sp")
-  return(z)
-}
 plottable <- function(x) {
   x <- tidy(x)
   x <- mutate(x,lat*-1)
